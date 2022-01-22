@@ -1,0 +1,52 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="submitContact()">
+  <div class="form-container">
+    <div class="pad-form">
+      <label for="firstName" >First Name </label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        formControlName="firstName"
+        class="pad-form"
+      />
+    </div>
+
+    <div class="pad-form">
+      <label for="lastName" >Last Name </label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        formControlName="lastName"
+        class="pad-form"
+      />
+    </div>
+    <div class="pad-form">
+      <label for="id" >Id </label>
+      <input
+        type="text"
+        id="id"
+        name="id"
+        class="pad-form"
+        formControlName="id"
+      />
+    </div>
+
+    <div class="pad-form">
+      <label for="phone" >phone </label>
+      <input
+        type="text"
+        id="phone"
+        class="pad-form"
+        name="phone"
+        formControlName="phone"
+      />
+    </div>
+
+    <p class="pad-form">
+      <button type="submit" class="submit-button">
+        Submit Contact
+      </button>
+    </p>
+  </div>
+</form>

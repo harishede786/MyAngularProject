@@ -1,0 +1,19 @@
+<div class='app-container'>
+<h2>{{ title }}</h2>
+
+<div class="contact-list-container">
+  <ng-container *ngFor="let contact of data; let contactIndex = index">
+    <div class="contact-list-row">
+      <div class="contact flex-2">{{ contact.firstName }} {{ contact.lastName }}</div>
+      <div class="contact flex-1">{{ contact.id }}</div>
+      <div class="contact flex-2">{{ contact.phone }}</div>
+      <button class="edit-button " (click)="openDialog(contactIndex, contact)">
+        Edit
+      </button>
+      <button class="delete-button " (click)="deleteContact(contact)">X</button>
+    </div>
+  </ng-container>
+</div>
+
+<button class="add-button" (click)="openDialog(0)">Add Contact</button>
+</div>

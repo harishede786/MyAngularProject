@@ -1,0 +1,29 @@
+@mixin button {
+    padding: 6px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.submit-button{
+    @include button;
+    border:1px solid green;
+    background: green;
+    margin-top: 5px;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pad-form{
+        padding: 5px;
+    }
+    input{
+        margin-left: 10px;
+    }
+}
